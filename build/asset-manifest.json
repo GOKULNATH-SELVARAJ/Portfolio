@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4300c1c7.css",
+    "main.js": "/static/js/main.efe167eb.js",
+    "static/media/work1.png": "/static/media/work1.988681b34a67c96faa95.png",
+    "static/media/portfolio.jpg": "/static/media/portfolio.aa437ebce0990ef62bf6.jpg",
+    "static/media/Poppins-Medium.ttf": "/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/GOKULNATH S.pdf": "/static/media/GOKULNATH S.33fcb8739ecce2edced7.pdf",
+    "index.html": "/index.html",
+    "main.4300c1c7.css.map": "/static/css/main.4300c1c7.css.map",
+    "main.efe167eb.js.map": "/static/js/main.efe167eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4300c1c7.css",
+    "static/js/main.efe167eb.js"
+  ]
+}
