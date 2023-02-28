@@ -71,7 +71,7 @@ impressive performance.</p>
             transition={{duration: 0.3}}
             className="btn"
           >
-            <a href="#">Send</a>
+            <a href="index.html">Send</a>
           </motion.div>
         </motion.div>
       </div>
