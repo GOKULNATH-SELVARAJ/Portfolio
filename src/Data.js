@@ -84,7 +84,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "9/664, Silvampathy, Meenakshipuram, Palakkad ",
+    infoText: " Meenakshipuram, Palakkad ",
   },
   {
     id: 2,

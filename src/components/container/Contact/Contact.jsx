@@ -21,7 +21,7 @@ const Contact = () => {
           whileInView={{ x: [-150,0], opacity: 1 }}
           transition={{duration: 1}}
           className='contact_left_container'>
-          <h3>Hello!!</h3>
+          <h3>GOKULNATH S</h3>
           <p className='contact_text'>To work in a challenging environment
 demanding all my skills and adapt
 myself in different fields for the

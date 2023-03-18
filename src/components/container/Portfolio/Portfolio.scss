@@ -56,7 +56,7 @@
             }
 
             .hoverLayer {
-                background: #8c12f0;
+                background: #38c3ff;
                 width: 100%;
                 height: 100%;
                 z-index: 5;
@@ -106,7 +106,7 @@
 
             span {
                 font-size: 3.5rem;
-                color: #8c12f0;
+                color: #bc2900;
 
                 @media screen and (max-width: 599px) {
                     font-size: 2rem;
@@ -121,7 +121,7 @@
     .talk_right {
         align-self: flex-end;
         margin-bottom: 1.5rem;
-        background: #8c12f0;
+        background: #bc2900;
         padding: 0.65rem 1rem;
         border-radius: 10px;
         font-size: 0.85rem;
