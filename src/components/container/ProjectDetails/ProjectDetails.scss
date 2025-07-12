@@ -65,7 +65,7 @@
       font-weight: 700;
       margin-bottom: 10px;
       text-shadow: 0 2px 10px var(--shadow-dark);
-      background: var(--gradient-primary);
+      background: #ac8fff;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -127,12 +127,12 @@
             .project-image {
               width: 100%;
               height: 100%;
-              object-fit: cover;
+              object-fit: contain;
               transition: transform 0.3s ease;
 
-              &:hover {
-                transform: scale(1.05);
-              }
+              // &:hover {
+              //   transform: scale(1.05);
+              // }
             }
 
             .nav-button {
@@ -142,8 +142,8 @@
               background: rgba(255, 255, 255, 0.9);
               border: none;
               border-radius: 50%;
-              width: 50px;
-              height: 50px;
+              width: 35px;
+              height: 35px;
               cursor: pointer;
               transition: all 0.3s ease;
               display: flex;
@@ -226,8 +226,9 @@
             }
 
             .tech-item {
-              background: rgba(6, 182, 212, 0.1);
-              border: 1px solid rgba(6, 182, 212, 0.3);
+              background: #cabbf94b;
+              // rgba(202, 187, 249, 0.653);
+              border: 1px solid #cabbf9ec;
               border-radius: 15px;
               padding: 15px 12px;
               transition: all 0.3s ease;
@@ -237,11 +238,11 @@
               gap: 8px;
               text-align: center;
 
-              &:hover {
-                background: rgba(6, 182, 212, 0.2);
-                transform: translateY(-3px);
-                box-shadow: 0 6px 20px var(--shadow-accent);
-              }
+              // &:hover {
+              //   background: rgba(202, 187, 249, 0.381);
+              //   transform: translateY(-3px);
+              //   box-shadow: 0 6px 20px var(--shadow-accent);
+              // }
 
               .tech-icon {
                 font-size: 1.5rem;
@@ -255,7 +256,7 @@
               }
 
               .tech-name {
-                background: var(--gradient-primary);
+                background: var(--text-primary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -321,45 +322,39 @@
           }
 
           .action-buttons {
-            margin-top: 30px;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+          }
 
-            .action-button {
-              padding: 12px 24px;
-              border: none;
-              border-radius: 25px;
-              cursor: pointer;
-              font-weight: 500;
-              transition: all 0.3s ease;
-              text-decoration: none;
-              display: inline-flex;
-              align-items: center;
-              gap: 8px;
+          .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #bda5ff;
+            color: #000000;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(120, 98, 186, 0.15);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
 
-              &.primary {
-                background: var(--gradient-primary);
-                color: white;
-
-                &:hover {
-                  background: linear-gradient(45deg, #667eea, #38c3ff);
-                  transform: translateY(-2px);
-                  box-shadow: 0 4px 15px rgba(56, 195, 255, 0.4);
-                }
-              }
-
-              &.secondary {
-                background: var(--bg-card);
-                color: var(--text-primary);
-                border: 1px solid var(--border-light);
-
-                &:hover {
-                  background: var(--border-medium);
-                  transform: translateY(-2px);
-                }
-              }
+            .icon {
+              font-size: 1.2em;
             }
+
+            // &:hover,
+            // &:focus {
+            //   background: linear-gradient(90deg, #cbbbf9 0%, #7862ba 100%);
+            //   transform: translateY(-2px) scale(1.03);
+            //   box-shadow: 0 4px 16px rgba(120, 98, 186, 0.25);
+            //   color: #fff;
+            //   text-decoration: none;
+            // }
           }
         }
       }

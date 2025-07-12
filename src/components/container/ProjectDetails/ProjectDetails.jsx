@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { workImages } from "../../../Data";
+import { getOS, workImages } from "../../../Data";
 import "./ProjectDetails.scss";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 const ProjectDetails = () => {
-  const { id } = useParams();
+  const { name } = useParams();
   const navigate = useNavigate();
-  const project = workImages.find((p) => String(p.id) === String(id));
+  const decodedName = name.replace(/-/g, " ");
+  const project = workImages.find(
+    (p) => String(p.name) === String(decodedName)
+  );
   const [currentImage, setCurrentImage] = React.useState(0);
-
+  const userOS = getOS();
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,6 +48,18 @@ const ProjectDetails = () => {
     );
   };
 
+  const getStoreText = () => {
+    const ua = navigator.userAgent.toLowerCase();
+
+    if (/android/.test(ua)) return "Visit Play Store";
+    if (/iphone|ipad|ipod/.test(ua)) return "Visit App Store";
+    if (/mac/.test(ua)) return "Visit App Store";
+    if (/win/.test(ua)) return "Visit Play Store";
+    if (/linux/.test(ua)) return "Visit Play Store";
+
+    return "Visit Play Store"; // Default fallback
+  };
+
   return (
     <div className="project-details-page">
       {/* Header */}
@@ -71,7 +87,6 @@ const ProjectDetails = () => {
           Explore the details and features of this amazing project
         </p>
       </section>
-
       {/* Main Content */}
       <main className="main-content">
         <div className="content-grid">
@@ -139,25 +154,17 @@ const ProjectDetails = () => {
           <div className="info-section">
             <div className="project-info">
               <h2 className="info-title">About This Project</h2>
-
-              <div className="project-description">
-                <strong>Description:</strong> {project.description}
-              </div>
-
+              <div className="project-description">{project.description}</div>
               <div className="action-buttons">
-                <button className="action-button primary">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    width="16"
-                    height="16"
-                  >
-                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  View Live Demo
-                </button>
+                <a
+                  className="action-button primary"
+                  href={project.live[userOS]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaExternalLinkSquareAlt className="icon" />
+                  <span>{getStoreText()}</span>
+                </a>
               </div>
             </div>
           </div>

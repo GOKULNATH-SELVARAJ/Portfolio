@@ -74,7 +74,9 @@ const Portfolio = () => {
             className="workImage"
             key={work.id}
             style={{ cursor: "pointer" }}
-            onClick={() => navigate(`/project/${work.id}`)}
+            onClick={() =>
+              navigate(`/project/${work.name.replace(/\s+/g, "-")}`)
+            }
           >
             <div className="image-container">
               <img
