@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.1753cd6d.css",
-    "main.js": "/Portfolio/static/js/main.d4512e78.js",
+    "main.css": "/Portfolio/static/css/main.c7bd9ad9.css",
+    "main.js": "/Portfolio/static/js/main.64aa4757.js",
     "static/media/Profile_image.png": "/Portfolio/static/media/Profile_image.49141c200b94adea3898.png",
-    "static/media/ABG_connect_4.png": "/Portfolio/static/media/ABG_connect_4.d90c4c9a7e3225fe8c52.png",
-    "static/media/ABG_connect_1.png": "/Portfolio/static/media/ABG_connect_1.2c56f17e0de66ecd4b2a.png",
+    "static/media/ABG_connect_4.png": "/Portfolio/static/media/ABG_connect_4.8cc34a404fd9fe5c8815.png",
+    "static/media/ABG_connect_1.png": "/Portfolio/static/media/ABG_connect_1.e3ee5ae0822f9d382d1d.png",
     "static/media/ClubM_4.png": "/Portfolio/static/media/ClubM_4.c0c6843113e55544b961.png",
     "static/media/ClubM_1.png": "/Portfolio/static/media/ClubM_1.f6749404fa3a4aff2535.png",
     "static/media/Gintaa_1.png": "/Portfolio/static/media/Gintaa_1.4077af051f62cbb2a9ec.png",
@@ -12,21 +12,20 @@
     "static/media/ClubM_3.png": "/Portfolio/static/media/ClubM_3.b7e1a03b8a98806cab11.png",
     "static/media/ClubM_2.png": "/Portfolio/static/media/ClubM_2.8b5702934d7248168b6c.png",
     "static/media/Gintaa_3.png": "/Portfolio/static/media/Gintaa_3.c897eafb1c74a1ec06ad.png",
+    "static/media/ABG_connect_3.png": "/Portfolio/static/media/ABG_connect_3.93339737d23941a7b070.png",
     "static/media/Gintaa_Logo.png": "/Portfolio/static/media/Gintaa_Logo.62dab823900154289ed8.png",
-    "static/media/ABG_connect_3.png": "/Portfolio/static/media/ABG_connect_3.199491143570f4c159c0.png",
+    "static/media/ABG_connect_2.png": "/Portfolio/static/media/ABG_connect_2.e9977bc333f3bf1a17bf.png",
     "static/media/Poppins-Medium.ttf": "/Portfolio/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
-    "static/media/ABG_connect_2.png": "/Portfolio/static/media/ABG_connect_2.61d27114049f916515ea.png",
     "static/media/Gintaa_4.png": "/Portfolio/static/media/Gintaa_4.bd8159ba62f9a56b0c3d.png",
     "static/media/ABG_logo.png": "/Portfolio/static/media/ABG_logo.ae91631c0be5f02567f2.png",
     "static/media/Gokulnath_Selvaraj.pdf": "/Portfolio/static/media/Gokulnath_Selvaraj.66cf5296d0c10b5c2ffa.pdf",
-    "static/media/GOKULNATH S.pdf": "/Portfolio/static/media/GOKULNATH S.8a6d684b90d42f6ce3e7.pdf",
     "static/media/ClubM_logo.png": "/Portfolio/static/media/ClubM_logo.3d6b20514593799f401c.png",
     "index.html": "/Portfolio/index.html",
-    "main.1753cd6d.css.map": "/Portfolio/static/css/main.1753cd6d.css.map",
-    "main.d4512e78.js.map": "/Portfolio/static/js/main.d4512e78.js.map"
+    "main.c7bd9ad9.css.map": "/Portfolio/static/css/main.c7bd9ad9.css.map",
+    "main.64aa4757.js.map": "/Portfolio/static/js/main.64aa4757.js.map"
   },
   "entrypoints": [
-    "static/css/main.1753cd6d.css",
-    "static/js/main.d4512e78.js"
+    "static/css/main.c7bd9ad9.css",
+    "static/js/main.64aa4757.js"
   ]
 }
