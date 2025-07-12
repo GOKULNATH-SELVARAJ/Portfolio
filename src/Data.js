@@ -40,10 +40,10 @@ export const navLinks = ["home", "skills", "projects", "contact"];
 
 export const socialIcons = [
   <a href="https://www.linkedin.com/in/gokulnath363/">
-    <FaLinkedin color="#cbbbf9" />
+    <FaLinkedin color="#cbbbf9" size={20} />
   </a>,
   <a href="https://github.com/GOKULNATH-SELVARAJ">
-    <FiGithub color="#cbbbf9" />
+    <FiGithub color="#cbbbf9" size={20} />
   </a>,
 ];
 

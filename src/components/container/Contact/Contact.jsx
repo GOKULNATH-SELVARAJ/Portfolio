@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.scss";
 import { contacts } from "../../../Data";
 import { motion } from "framer-motion";
+import Footer from "../Footer/Footer";
 
 const Contact = () => {
   return (
@@ -76,6 +77,7 @@ const Contact = () => {
           </motion.div>
         </motion.div> */}
       </div>
+      <Footer />
     </div>
   );
 };
