@@ -1,21 +1,50 @@
-import { FaHtml5, FaCss3, FaNodeJs, FaReact, FaFigma, FaPhoneAlt, FaUser, FaMapMarkerAlt, FaPaperPlane,  FaLinkedin } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3,
+  FaNodeJs,
+  FaReact,
+  FaFigma,
+  FaPhoneAlt,
+  FaUser,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+  FaLinkedin,
+} from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
-import { SiCplusplus } from "react-icons/si";
+import {
+  SiFlutter,
+  SiPython,
+  SiTypescript,
+  SiSocketdotio,
+} from "react-icons/si";
 import { SiC } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
 
+import abg_logo from "./assets/ABG_logo.png";
+import gintaa_logo from "./assets/Gintaa_Logo.png";
+import gintaa_1 from "./assets/Gintaa_1.png";
+import gintaa_2 from "./assets/Gintaa_2.png";
+import gintaa_3 from "./assets/Gintaa_3.png";
+import gintaa_4 from "./assets/Gintaa_4.png";
+import abg_connect_1 from "./assets/ABG_connect_1.png";
+import abg_connect_2 from "./assets/ABG_connect_2.png";
+import abg_connect_3 from "./assets/ABG_connect_3.png";
+import abg_connect_4 from "./assets/ABG_connect_4.png";
+import clubM_logo from "./assets/ClubM_logo.png";
+import clubM_1 from "./assets/ClubM_1.png";
+import clubM_2 from "./assets/ClubM_2.png";
+import clubM_3 from "./assets/ClubM_3.png";
+import clubM_4 from "./assets/ClubM_4.png";
 
-import work1 from "./assets/work1.png";
-
-export const navLinks = ["home", "about", "skills", "portfolio", "contact"]
+export const navLinks = ["home", "skills", "projects", "contact"];
 
 export const socialIcons = [
   <a href="https://www.linkedin.com/in/gokulnath363/">
-                <FaLinkedin />
-            </a>,
+    <FaLinkedin color="#cbbbf9" size={20} />
+  </a>,
   <a href="https://github.com/GOKULNATH-SELVARAJ">
-  <FiGithub />
-</a>
+    <FiGithub color="#cbbbf9" size={20} />
+  </a>,
 ];
 
 export const bios = [
@@ -35,26 +64,148 @@ export const bios = [
     id: 3,
     icon: <FaPaperPlane />,
     key: "Email",
-    value: "gokulnath.ct20@bitsathy.ac.in",
+    value: "us.gokulnath@gmail.com",
   },
 ];
 
 export const icons = [
   <SiC />,
-  <SiCplusplus />,
+  // <SiCplusplus />,
   <FaHtml5 />,
   <FaCss3 />,
   <DiJavascript />,
   <FaReact />,
   <FaNodeJs />,
   <FaFigma />,
+  <SiFlutter />,
 ];
-export const experiences = [
+
+// Enhanced skills data with categories and proficiency levels
+export const skillsData = [
+  {
+    id: 1,
+    name: "React Native",
+    icon: <FaReact />,
+    category: "Mobile Development",
+    proficiency: 90,
+    color: "#61DAFB",
+  },
+  {
+    id: 2,
+    name: "JavaScript",
+    icon: <DiJavascript />,
+    category: "Programming Languages",
+    proficiency: 88,
+    color: "#F7DF1E",
+  },
+  {
+    id: 3,
+    name: "TypeScript",
+    icon: <SiTypescript />,
+    category: "Programming Languages",
+    proficiency: 80,
+    color: "#3178C6",
+  },
+  {
+    id: 4,
+    name: "Socket.io",
+    icon: <SiSocketdotio />,
+    category: "Backend",
+    proficiency: 75,
+    color: "#cbbbf9",
+  },
+  {
+    id: 5,
+    name: "HTML5",
+    icon: <FaHtml5 />,
+    category: "Frontend",
+    proficiency: 90,
+    color: "#E34F26",
+  },
+  {
+    id: 6,
+    name: "CSS3",
+    icon: <FaCss3 />,
+    category: "Frontend",
+    proficiency: 85,
+    color: "#1572B6",
+  },
+  {
+    id: 7,
+    name: "React",
+    icon: <FaReact />,
+    category: "Frontend",
+    proficiency: 82,
+    color: "#61DAFB",
+  },
+  {
+    id: 8,
+    name: "Python",
+    icon: <SiPython />,
+    category: "Programming Languages",
+    proficiency: 80,
+    color: "#A8B9CC",
+  },
+  {
+    id: 9,
+    name: "Flutter",
+    icon: <SiFlutter />,
+    category: "Mobile Development",
+    proficiency: 85,
+    color: "#02569B",
+  },
+  {
+    id: 10,
+    name: "Node.js",
+    icon: <FaNodeJs />,
+    category: "Backend",
+    proficiency: 75,
+    color: "#339933",
+  },
+  {
+    id: 11,
+    name: "Firebase",
+    icon: <FaReact />,
+    category: "Backend",
+    proficiency: 78,
+    color: "#FFCA28",
+  },
+  {
+    id: 12,
+    name: "Git",
+    icon: <FiGithub />,
+    category: "Tools",
+    proficiency: 85,
+    color: "#F05032",
+  },
+];
+
+// Professional experience data
+export const professionalExperience = [
+  {
+    id: 1,
+    company: "Divum Corporate Services Pvt Ltd",
+    role: "Mobile Application Developer",
+    duration: "Jul 2023 - Present",
+    techStack: [
+      "React Native",
+      "TypeScript",
+      "Firebase",
+      "Redux",
+      "Git",
+      "Kotlin",
+    ],
+    description:
+      "Contributed to multiple cross-domain mobile apps including ABG Connect, Gintaa Delivery Partner, and Club Mahindra. Implemented Firebase push notifications and optimized API calls using Redux in ABG Connect. Developed a native Kotlin module in Gintaa to play delivery alerts even in Silent/DND mode. Improved UI/UX and performance in the Club Mahindra app, including dynamic carousel components. Collaborated with cross-functional teams to deliver scalable and user-friendly solutions.",
+  },
+];
+
+export const educationData = [
   {
     id: 1,
     year: "2020 - 2024",
     position: "Bannari Amman Institute of Technology, Sathyamangalam",
-    company: "B.Tech Computer Technology",
+    company: "B.Tech Computer Technology with 8.68 CGPA",
   },
   {
     di: 2,
@@ -73,12 +224,73 @@ export const experiences = [
 export const workImages = [
   {
     id: 1,
-    img: work1,
-    name: "project 1",
-    category: "web"
-  }
-]
-
+    images: [
+      abg_logo,
+      abg_connect_1,
+      abg_connect_2,
+      abg_connect_3,
+      abg_connect_4,
+    ],
+    name: "ABG Connect",
+    category: "live",
+    description: "A full-stack e-commerce clone with React and Node.js",
+    github: "",
+    live: "https://play.google.com/store/apps/details?id=abg.mice.android&pcampaignid=web_share",
+    techStack: [
+      { name: "React Native", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Firebase", icon: <FaReact /> },
+      { name: "Redux", icon: <FaReact /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Socket.io", icon: <SiSocketdotio /> },
+    ],
+  },
+  {
+    id: 2,
+    images: [gintaa_logo, gintaa_1, gintaa_2, gintaa_3, gintaa_4],
+    name: "Gintaa Delivery Partner",
+    category: "live",
+    description:
+      "A mobile application built for delivery personnel to manage and streamline order deliveries efficiently. The app includes real-time order updates, route tracking, push notifications, and a native Android module that ensures alert sounds are played even in Silent and DND modes. Developed using React Native with custom Kotlin integrations to enhance reliability and user experience.",
+    github: "",
+    live: "https://play.google.com/store/apps/details?id=com.asconsoft.gintaa.delivery.prod&pcampaignid=web_share",
+    techStack: [
+      { name: "React Native", icon: <FaReact /> },
+      { name: "Kotlin", icon: <FaReact /> },
+      { name: "Firebase", icon: <FaReact /> },
+      { name: "Redux", icon: <FaReact /> },
+      { name: "Socket.io", icon: <SiSocketdotio /> },
+      { name: "Push Notifications", icon: <FaReact /> },
+    ],
+  },
+  {
+    id: 3,
+    images: [clubM_logo, clubM_1, clubM_2, clubM_3, clubM_4],
+    name: "Club Mahindra",
+    category: "live",
+    description:
+      "A feature-rich mobile application designed to enhance the vacation planning experience for Club Mahindra members. The app allows users to explore resorts, check availability, book holidays, and access exclusive member benefits. Contributed to performance improvements, UI enhancements, and optimized API usage to deliver a smooth and engaging user experience using React Native and Redux.",
+    github: "",
+    live: "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+    techStack: [
+      { name: "React Native", icon: <FaReact /> },
+      { name: "Redux", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      // { name: "Firebase", icon: <SiFirebase /> },
+      { name: "REST APIs", icon: <FaReact /> },
+      { name: "Performance Optimization", icon: <FaReact /> },
+    ],
+  },
+  // {
+  //   id: 4,
+  //   images: [abg_logo, profile, abg_connect_1],
+  //   name: "Task Manager",
+  //   category: "personal",
+  //   description: "Personal task management application",
+  //   github: "https://github.com/GOKULNATH-SELVARAJ/task-manager",
+  //   live: "#",
+  // },
+];
 
 export const contacts = [
   {
@@ -89,7 +301,7 @@ export const contacts = [
   {
     id: 2,
     icon: <FaPaperPlane />,
-    infoText: "gokulnath.ct20@bitsathy.ac.in",
+    infoText: "us.gokulnath@gmail.com",
   },
   {
     id: 3,

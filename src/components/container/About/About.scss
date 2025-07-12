@@ -1,68 +1,366 @@
-.about_container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    place-items: center;
+.about-section {
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(6, 182, 212, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(6, 182, 212, 0.05) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+  }
+
+  .container {
+    width: 100%;
     position: relative;
+    z-index: 1;
+  }
 
-    @media screen and (max-width: 700px) {
-        grid-template-columns: 1fr;
-    }
+  .title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
 
-    .about_left {
-        background: #38c3ff;
-        max-width: 350px;
-        height: 350px;
-        justify-self: center;
-        border-radius: 25px;
-        
+.about_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-        img {
-            object-fit: cover;
+  .about_content {
+    color: var(--text-primary);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .description-wrapper {
+        .description-card {
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: 20px;
+          padding: 2.5rem;
+          backdrop-filter: blur(10px);
+          box-shadow: 0 8px 32px var(--shadow-dark);
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: var(--border-medium);
+            box-shadow: 0 12px 40px var(--shadow-accent);
+            transform: translateY(-2px);
+          }
+
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -8px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 60px;
+              height: 3px;
+              background: var(--gradient-primary);
+              border-radius: 2px;
+            }
+          }
+
+          .about-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+            margin: 0;
+
+            @media screen and (max-width: 768px) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .bio-section {
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 2rem;
+          background: var(--gradient-primary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-align: center;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 1.3rem;
+          }
+        }
+
+        .bio-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          max-width: 800px;
+          margin: 0 auto;
+
+          .bio-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+            text-align: left;
+            backdrop-filter: blur(10px);
+
+            &:hover {
+              background: var(--border-medium);
+              border-color: var(--accent-color);
+              box-shadow: 0 8px 25px var(--shadow-accent);
+            }
+
+            .bio-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 50px;
+              height: 50px;
+              background: var(--gradient-primary);
+              border-radius: 12px;
+              color: var(--text-primary);
+              font-size: 1.2rem;
+              flex-shrink: 0;
+              box-shadow: 0 4px 15px var(--shadow-primary);
+            }
+
+            .bio-content {
+              display: flex;
+              flex-direction: column;
+              gap: 0.3rem;
+              flex: 1;
+
+              .bio-key {
+                font-size: 0.9rem;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+              }
+
+              .bio-value {
+                font-size: 1.05rem;
+                color: var(--text-primary);
+                font-weight: 500;
+                word-break: break-word;
+              }
+            }
+          }
+        }
+      }
+
+      .cta-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .resume-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.75rem;
+          text-decoration: none;
+          color: var(--text-primary);
+          background: var(--gradient-primary);
+          padding: 1.2rem 2.5rem;
+          border-radius: 16px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          text-transform: capitalize;
+          box-shadow: 0 8px 25px var(--shadow-primary);
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
-            border-radius: 25px;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.2),
+              transparent
+            );
+            transition: left 0.5s;
+          }
+
+          &:hover::before {
+            left: 100%;
+          }
+
+          &:hover {
+            box-shadow: 0 12px 35px var(--shadow-primary);
+          }
+
+          svg {
+            transition: transform 0.3s ease;
+          }
+
+          &:hover svg {
+            transform: translateY(2px);
+          }
+
+          @media screen and (max-width: 768px) {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+          }
         }
-        
+      }
     }
-    .about_right {
-        color: #fff;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
+  }
+}
 
-        @media screen and (max-width: 700px) {
-            padding: 0;
-            margin-top: 2rem;
-        }
-        
-        p {
-            font-size: 0.85rem;
-            margin-bottom: 1rem;max-width: 450px;
-        }
-        .bio {
-            display: flex;
-            font-size: 0.85rem;
-            max-width: 200px;
-            margin-bottom: 1rem;
+// Responsive adjustments
+@media screen and (max-width: 768px) {
+  .about_container {
+    .about_content {
+      .about-content {
+        gap: 2.5rem;
 
-            .bioKey {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                margin-right: 3rem;
+        .description-wrapper {
+          .description-card {
+            padding: 2rem;
+          }
+        }
+
+        .bio-section {
+          .bio-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+            .bio-item {
+              padding: 1.2rem;
+
+              .bio-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+              }
+
+              .bio-content {
+                .bio-key {
+                  font-size: 0.85rem;
+                }
+
+                .bio-value {
+                  font-size: 1rem;
+                }
+              }
             }
+          }
         }
-        a {
-            
-                text-decoration: none;
-                color: #000;
-                background: #fff;
-                padding: 0.65rem 1rem;
-                border-radius: 10px;
-                font-size: 0.85rem;
-                text-transform: capitalize;
-                width: 165px;
-        }
+      }
     }
-    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_container {
+    .about_content {
+      .about-content {
+        .description-wrapper {
+          .description-card {
+            padding: 1.5rem;
+
+            h3 {
+              font-size: 1.3rem;
+            }
+
+            .about-description {
+              font-size: 0.95rem;
+            }
+          }
+        }
+
+        .bio-section {
+          .bio-grid {
+            .bio-item {
+              padding: 1rem;
+
+              .bio-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+              }
+
+              .bio-content {
+                .bio-key {
+                  font-size: 0.8rem;
+                }
+
+                .bio-value {
+                  font-size: 0.95rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

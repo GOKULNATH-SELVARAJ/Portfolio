@@ -1,52 +1,62 @@
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-primary);
+  column-gap: 2rem;
+  margin-bottom: 1rem;
+
+  .copyright {
+    p {
+      font-size: 0.85rem;
+
+      span {
+        background: #cbbbf9;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 800;
+      }
+    }
+  }
+  .followMe {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
-    column-gap: 2rem;
+    gap: 1rem;
 
-    .copyright {
-
-        p{
-            font-size: 0.85rem;
-
-            span {
-                color: #d4ff37;
-                font-weight: 800;
-            }
-        }
+    h4 {
+      font-size: 0.85rem;
     }
-    .followMe {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        h4 {
-            font-size: 0.85rem;
-        }
-        .stick {
-            height: 2px;
-            width: 3rem;
-            background: #fff;
-        }
-
-        .social_icons {
-            display: flex;
-            gap: 0.5rem;
-
-            svg {
-                color: #d4ff37;
-                opacity: 0.7;
-                cursor: pointer;
-                &:hover {
-                    opacity: 1;      
-                }
-            }
-        }
+    .stick {
+      height: 2px;
+      width: 3rem;
+      background: var(--text-primary);
     }
+
+    .social_icons {
+      display: flex;
+      gap: 0.5rem;
+      // background: #cbbbf9;
+      color: #cbbbf9;
+
+      svg {
+
+        background: #cbbbf9;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        opacity: 0.7;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+        }
+        // stroke: ;
+      }
+    }
+  }
 }
