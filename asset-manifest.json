@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.c7bd9ad9.css",
-    "main.js": "/Portfolio/static/js/main.64aa4757.js",
+    "main.css": "/Portfolio/static/css/main.3310baf7.css",
+    "main.js": "/Portfolio/static/js/main.7cfe55b0.js",
     "static/media/Profile_image.png": "/Portfolio/static/media/Profile_image.49141c200b94adea3898.png",
     "static/media/ABG_connect_4.png": "/Portfolio/static/media/ABG_connect_4.8cc34a404fd9fe5c8815.png",
     "static/media/ABG_connect_1.png": "/Portfolio/static/media/ABG_connect_1.e3ee5ae0822f9d382d1d.png",
@@ -21,11 +21,11 @@
     "static/media/Gokulnath_Selvaraj.pdf": "/Portfolio/static/media/Gokulnath_Selvaraj.66cf5296d0c10b5c2ffa.pdf",
     "static/media/ClubM_logo.png": "/Portfolio/static/media/ClubM_logo.3d6b20514593799f401c.png",
     "index.html": "/Portfolio/index.html",
-    "main.c7bd9ad9.css.map": "/Portfolio/static/css/main.c7bd9ad9.css.map",
-    "main.64aa4757.js.map": "/Portfolio/static/js/main.64aa4757.js.map"
+    "main.3310baf7.css.map": "/Portfolio/static/css/main.3310baf7.css.map",
+    "main.7cfe55b0.js.map": "/Portfolio/static/js/main.7cfe55b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7bd9ad9.css",
-    "static/js/main.64aa4757.js"
+    "static/css/main.3310baf7.css",
+    "static/js/main.7cfe55b0.js"
   ]
 }
