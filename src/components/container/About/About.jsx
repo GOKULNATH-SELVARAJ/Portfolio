@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.scss";
-import resume from "../../../assets/GOKULNATH S.pdf";
 import { motion } from "framer-motion";
 import { bios } from "../../../Data";
 

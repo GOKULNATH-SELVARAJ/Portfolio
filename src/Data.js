@@ -16,10 +16,14 @@ import {
   SiPython,
   SiTypescript,
   SiSocketdotio,
+  SiRedux,
+  SiFirebase,
+  SiC,
+  SiXcode,
+  SiRealm,
 } from "react-icons/si";
-import { SiC } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
-
+import { AiFillAndroid } from "react-icons/ai";
 import abg_logo from "./assets/ABG_logo.png";
 import gintaa_logo from "./assets/Gintaa_Logo.png";
 import gintaa_1 from "./assets/Gintaa_1.png";
@@ -86,7 +90,7 @@ export const skillsData = [
     id: 1,
     name: "React Native",
     icon: <FaReact />,
-    category: "Mobile Development",
+    category: "Mobile App Development",
     proficiency: 90,
     color: "#61DAFB",
   },
@@ -116,6 +120,22 @@ export const skillsData = [
   },
   {
     id: 5,
+    name: "Android",
+    icon: <AiFillAndroid />,
+    category: "Mobile App Development",
+    proficiency: 85,
+    color: "#78C257",
+  },
+  {
+    id: 6,
+    name: "iOS",
+    icon: <SiXcode />,
+    category: "Mobile App Development",
+    proficiency: 85,
+    color: "#61DAFB",
+  },
+  {
+    id: 7,
     name: "HTML5",
     icon: <FaHtml5 />,
     category: "Frontend",
@@ -123,7 +143,7 @@ export const skillsData = [
     color: "#E34F26",
   },
   {
-    id: 6,
+    id: 8,
     name: "CSS3",
     icon: <FaCss3 />,
     category: "Frontend",
@@ -131,7 +151,7 @@ export const skillsData = [
     color: "#1572B6",
   },
   {
-    id: 7,
+    id: 9,
     name: "React",
     icon: <FaReact />,
     category: "Frontend",
@@ -139,7 +159,7 @@ export const skillsData = [
     color: "#61DAFB",
   },
   {
-    id: 8,
+    id: 10,
     name: "Python",
     icon: <SiPython />,
     category: "Programming Languages",
@@ -147,15 +167,15 @@ export const skillsData = [
     color: "#A8B9CC",
   },
   {
-    id: 9,
+    id: 11,
     name: "Flutter",
     icon: <SiFlutter />,
-    category: "Mobile Development",
+    category: "Mobile App Development",
     proficiency: 85,
     color: "#02569B",
   },
   {
-    id: 10,
+    id: 12,
     name: "Node.js",
     icon: <FaNodeJs />,
     category: "Backend",
@@ -163,15 +183,15 @@ export const skillsData = [
     color: "#339933",
   },
   {
-    id: 11,
+    id: 13,
     name: "Firebase",
-    icon: <FaReact />,
+    icon: <SiFirebase />,
     category: "Backend",
     proficiency: 78,
     color: "#FFCA28",
   },
   {
-    id: 12,
+    id: 14,
     name: "Git",
     icon: <FiGithub />,
     category: "Tools",
@@ -233,16 +253,26 @@ export const workImages = [
     ],
     name: "ABG Connect",
     category: "live",
-    description: "A full-stack e-commerce clone with React and Node.js",
+    description:
+      "ABG Connect is a corporate event management app that allows users to create and manage events, upload photos and documents, and share important information with participants. It features real-time push notifications to keep attendees informed and engaged, making event coordination smooth and efficient for teams.",
     github: "",
-    live: "https://play.google.com/store/apps/details?id=abg.mice.android&pcampaignid=web_share",
+    live: {
+      Android:
+        "https://play.google.com/store/apps/details?id=abg.mice.android&pcampaignid=web_share",
+      iOS: "https://apps.apple.com/in/app/abg-connect/id6504823580",
+      macOS: "https://apps.apple.com/in/app/abg-connect/id6504823580",
+      Windows:
+        "https://play.google.com/store/apps/details?id=abg.mice.android&pcampaignid=web_share",
+      Linux:
+        "https://play.google.com/store/apps/details?id=abg.mice.android&pcampaignid=web_share",
+    },
     techStack: [
       { name: "React Native", icon: <FaReact /> },
       { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Firebase", icon: <FaReact /> },
-      { name: "Redux", icon: <FaReact /> },
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Socket.io", icon: <SiSocketdotio /> },
+      { name: "Firebase", icon: <SiFirebase /> },
+      { name: "Redux", icon: <SiRedux /> },
+      { name: "Android", icon: <AiFillAndroid /> },
+      { name: "iOS", icon: <SiXcode /> },
     ],
   },
   {
@@ -253,14 +283,23 @@ export const workImages = [
     description:
       "A mobile application built for delivery personnel to manage and streamline order deliveries efficiently. The app includes real-time order updates, route tracking, push notifications, and a native Android module that ensures alert sounds are played even in Silent and DND modes. Developed using React Native with custom Kotlin integrations to enhance reliability and user experience.",
     github: "",
-    live: "https://play.google.com/store/apps/details?id=com.asconsoft.gintaa.delivery.prod&pcampaignid=web_share",
+    live: {
+      Android:
+        "https://play.google.com/store/apps/details?id=com.asconsoft.gintaa.delivery.prod&pcampaignid=web_share",
+      iOS: "https://apps.apple.com/in/app/gintaa-delivery-partner-app/id6740474792",
+      macOS:
+        "https://apps.apple.com/in/app/gintaa-delivery-partner-app/id6740474792",
+      Windows:
+        "https://play.google.com/store/apps/details?id=com.asconsoft.gintaa.delivery.prod&pcampaignid=web_share",
+      Linux:
+        "https://play.google.com/store/apps/details?id=com.asconsoft.gintaa.delivery.prod&pcampaignid=web_share",
+    },
     techStack: [
       { name: "React Native", icon: <FaReact /> },
-      { name: "Kotlin", icon: <FaReact /> },
       { name: "Firebase", icon: <FaReact /> },
-      { name: "Redux", icon: <FaReact /> },
-      { name: "Socket.io", icon: <SiSocketdotio /> },
       { name: "Push Notifications", icon: <FaReact /> },
+      { name: "Android", icon: <AiFillAndroid /> },
+      { name: "iOS", icon: <SiXcode /> },
     ],
   },
   {
@@ -271,14 +310,23 @@ export const workImages = [
     description:
       "A feature-rich mobile application designed to enhance the vacation planning experience for Club Mahindra members. The app allows users to explore resorts, check availability, book holidays, and access exclusive member benefits. Contributed to performance improvements, UI enhancements, and optimized API usage to deliver a smooth and engaging user experience using React Native and Redux.",
     github: "",
-    live: "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+    live: {
+      Android:
+        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+      iOS: "https://apps.apple.com/in/app/club-mahindra/id1146810334",
+      macOS: "https://apps.apple.com/in/app/club-mahindra/id1146810334",
+      Windows:
+        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+      Linux:
+        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+    },
     techStack: [
       { name: "React Native", icon: <FaReact /> },
       { name: "Redux", icon: <FaReact /> },
       { name: "TypeScript", icon: <SiTypescript /> },
-      // { name: "Firebase", icon: <SiFirebase /> },
-      { name: "REST APIs", icon: <FaReact /> },
-      { name: "Performance Optimization", icon: <FaReact /> },
+      { name: "Realm", icon: <SiRealm /> },
+      { name: "Android", icon: <AiFillAndroid /> },
+      { name: "iOS", icon: <SiXcode /> },
     ],
   },
   // {
@@ -309,3 +357,20 @@ export const contacts = [
     infoText: "+91-9345592552",
   },
 ];
+
+export const getOS = () => {
+  if (navigator.userAgentData) {
+    return navigator.userAgentData.platform;
+  }
+
+  // Fallback for non-Chromium browsers (still uses deprecated `platform`)
+  const userAgent = navigator.userAgent.toLowerCase();
+
+  if (/android/.test(userAgent)) return "Android";
+  if (/iphone|ipad|ipod/.test(userAgent)) return "iOS";
+  if (/mac/.test(userAgent)) return "macOS";
+  if (/win/.test(userAgent)) return "Windows";
+  if (/linux/.test(userAgent)) return "Linux";
+
+  return "Android";
+};
