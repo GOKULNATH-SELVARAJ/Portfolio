@@ -25,6 +25,7 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
+        viewport={{ once: true }}
         className="title"
       >
         <h1>Skills & Experience</h1>
@@ -33,6 +34,7 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
+        viewport={{ once: true }}
         className="select"
       >
         <button
@@ -61,6 +63,7 @@ const Skills = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ y: [-50, 0], opacity: 1 }}
+            viewport={{ once: true }}
             className="skills-grid"
           >
             {filteredSkills.map((skill, index) => (
@@ -68,6 +71,7 @@ const Skills = () => {
                 key={skill.id}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="skill-card"
                 style={{ "--skill-color": skill.color }}
@@ -86,6 +90,7 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
+        viewport={{ once: true }}
         className="professional-experiences"
       >
         {active === 2 &&
@@ -94,6 +99,7 @@ const Skills = () => {
               key={exp.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               className="professional-experience-card"
             >
@@ -124,6 +130,7 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
+        viewport={{ once: true }}
         className="experiences"
       >
         {active === 3 &&
@@ -132,6 +139,7 @@ const Skills = () => {
               key={experience.id}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               className="experience-card"
             >

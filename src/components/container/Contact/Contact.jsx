@@ -1,7 +1,6 @@
 import React from "react";
 import "./Contact.scss";
 import { contacts } from "../../../Data";
-import { socialIcons } from "../../../Data";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -10,6 +9,7 @@ const Contact = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
+        viewport={{ once: true }}
         className="title"
       >
         <span>get in touch</span>
@@ -19,14 +19,19 @@ const Contact = () => {
         <motion.div
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: [-150, 0], opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 1 }}
           className="contact_left_container"
         >
           <h3>GOKULNATH S</h3>
           <p className="contact_text">
-            To work in a challenging environment demanding all my skills and
-            adapt myself in different fields for the development of the
-            organization with impressive performance.
+            Experienced Mobile Application Developer with over 2 years of
+            expertise in building cross-platform apps using React Native.
+            Proficient in integrating RESTful APIs, managing state with Redux
+            and Redux Saga, and developing custom native modules. Delivered
+            high-quality solutions across domains like travel, e-commerce, event
+            management, and IoT, with a strong focus on performance and user
+            experience.
           </p>
           {contacts.map((contact) => {
             return (
@@ -36,15 +41,16 @@ const Contact = () => {
               </div>
             );
           })}
-          <div className="social_icons">
+          {/* <div className="social_icons">
             {socialIcons.map((socialIcon, index) => {
               return <div key={index}>{socialIcon}</div>;
             })}
-          </div>
+          </div> */}
         </motion.div>
         {/* <motion.div
           initial={{x: 0, opacity: 0}}
           whileInView={{ x: [150,0], opacity: 1 }}
+          viewport={{ once: true }}
           transition={{duration: 1}}
           className="contact_right"
         

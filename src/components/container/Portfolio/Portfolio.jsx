@@ -2,28 +2,28 @@ import React, { useEffect, useState } from "react";
 import "./Portfolio.scss";
 
 import { workImages } from "../../../Data";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
-  const [tab, setTab] = useState({ name: "all" });
+  const [tab, setTab] = useState({ name: "live" }); // Default to 'live'
   const [works, setWorks] = useState([]);
   const [active, setActive] = useState(0);
-  const [currentImageIndices, setCurrentImageIndices] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (tab.name === "all") {
-      setWorks(workImages);
-    } else {
-      const newWork = workImages.filter((workImage) => {
-        return workImage.category.toLowerCase() === tab.name;
-      });
-      setWorks(newWork);
-    }
+    const newWork = workImages.filter((workImage) => {
+      return workImage.category.toLowerCase() === tab.name;
+    });
+    setWorks(newWork);
   }, [tab]);
 
   const activeTab = (e, index) => {
-    setTab({ name: e.target.textContent.toLowerCase() });
+    setTab({
+      name: e.target.textContent.toLowerCase().includes("live")
+        ? "live"
+        : "personal",
+    });
     setActive(index);
   };
 
@@ -32,6 +32,7 @@ const Portfolio = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
+        viewport={{ once: true }}
         className="title"
       >
         <span>My Work</span>
@@ -42,6 +43,7 @@ const Portfolio = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="buttons"
       >
@@ -49,17 +51,11 @@ const Portfolio = () => {
           className={active === 0 ? "active" : ""}
           onClick={(e) => activeTab(e, 0)}
         >
-          All
+          Live Project
         </button>
         <button
           className={active === 1 ? "active" : ""}
           onClick={(e) => activeTab(e, 1)}
-        >
-          Live Project
-        </button>
-        <button
-          className={active === 2 ? "active" : ""}
-          onClick={(e) => activeTab(e, 2)}
         >
           Personal Project
         </button>
@@ -68,91 +64,35 @@ const Portfolio = () => {
       <motion.div
         initial={{ x: 0, opacity: 0 }}
         whileInView={{ x: [-250, 0], opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 1 }}
         exit={{ opacity: 0, y: -50 }}
         className="workImages"
       >
-        {works.map((work) => {
-          const currentImageIndex = currentImageIndices[work.id] || 0;
-
-          const nextImage = () => {
-            setCurrentImageIndices((prev) => ({
-              ...prev,
-              [work.id]:
-                currentImageIndex === work.images.length - 1
-                  ? 0
-                  : currentImageIndex + 1,
-            }));
-          };
-
-          const prevImage = () => {
-            setCurrentImageIndices((prev) => ({
-              ...prev,
-              [work.id]:
-                currentImageIndex === 0
-                  ? work.images.length - 1
-                  : currentImageIndex - 1,
-            }));
-          };
-
-          const goToImage = (index) => {
-            setCurrentImageIndices((prev) => ({
-              ...prev,
-              [work.id]: index,
-            }));
-          };
-
-          return (
-            <div className="workImage" key={work.id}>
-              <div className="carousel-container">
-                <img
-                  src={work.images[currentImageIndex]}
-                  alt={`${work.name} - Image ${currentImageIndex + 1}`}
-                />
-
-                {work.images.length > 1 && (
-                  <>
-                    <button
-                      className="carousel-btn prev-btn"
-                      onClick={prevImage}
-                      aria-label="Previous image"
-                    >
-                      <FiChevronLeft />
-                    </button>
-                    <button
-                      className="carousel-btn next-btn"
-                      onClick={nextImage}
-                      aria-label="Next image"
-                    >
-                      <FiChevronRight />
-                    </button>
-
-                    <div className="carousel-indicators">
-                      {work.images.map((_, index) => (
-                        <button
-                          key={index}
-                          className={`indicator ${
-                            index === currentImageIndex ? "active" : ""
-                          }`}
-                          onClick={() => goToImage(index)}
-                          aria-label={`Go to image ${index + 1}`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-
-              <div className="project-info">
-                <h3>{work.name}</h3>
-              </div>
+        {works.map((work) => (
+          <div
+            className="workImage"
+            key={work.id}
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate(`/project/${work.id}`)}
+          >
+            <div className="image-container">
+              <img
+                src={work.images[0]}
+                alt={`${work.name} - Image`}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
             </div>
-          );
-        })}
+            <div className="project-info">
+              <h3>{work.name}</h3>
+            </div>
+          </div>
+        ))}
       </motion.div>
-      <motion.div
+      {/* <motion.div
         initial={{ x: 0, opacity: 0 }}
         whileInView={{ x: [250, 0], opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 1 }}
         className="talk"
       >
@@ -168,7 +108,7 @@ const Portfolio = () => {
         >
           <a href="#contact">Contact Me</a>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
