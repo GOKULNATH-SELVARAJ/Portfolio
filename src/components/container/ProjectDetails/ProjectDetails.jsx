@@ -158,12 +158,20 @@ const ProjectDetails = () => {
               <div className="action-buttons">
                 <a
                   className="action-button primary"
-                  href={project.live[userOS]}
+                  href={
+                    project.live["Download"]
+                      ? project.live["Download"]
+                      : project.live[userOS]
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaExternalLinkSquareAlt className="icon" />
-                  <span>{getStoreText()}</span>
+                  {project.live["Download"] ? (
+                    <span>Download Android APK</span>
+                  ) : (
+                    <span>{getStoreText()}</span>
+                  )}
                 </a>
               </div>
             </div>
