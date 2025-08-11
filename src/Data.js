@@ -39,6 +39,12 @@ import clubM_1 from "./assets/ClubM_1.png";
 import clubM_2 from "./assets/ClubM_2.png";
 import clubM_3 from "./assets/ClubM_3.png";
 import clubM_4 from "./assets/ClubM_4.png";
+import Chit_chat_logo from "./assets/Chit_chat_logo.png";
+import Chit_chat_1 from "./assets/Chit_chat_1.png";
+import Chit_chat_2 from "./assets/Chit_chat_2.png";
+import Chit_chat_3 from "./assets/Chit_chat_3.png";
+import Chit_chat_4 from "./assets/Chit_chat_4.png";
+import Chit_chat_5 from "./assets/Chit_chat_5.png";
 
 export const navLinks = ["home", "skills", "projects", "contact"];
 
@@ -327,6 +333,43 @@ export const workImages = [
       { name: "Realm", icon: <SiRealm /> },
       { name: "Android", icon: <AiFillAndroid /> },
       { name: "iOS", icon: <SiXcode /> },
+    ],
+  },
+  {
+    id: 4,
+    images: [
+      Chit_chat_logo,
+      Chit_chat_1,
+      Chit_chat_2,
+      Chit_chat_3,
+      Chit_chat_4,
+      Chit_chat_5,
+    ],
+    name: "Chit Chat",
+    category: "personal",
+    description:
+      "A real-time messaging platform built for seamless, instant communication. Powered by Socket.IO and a Node.js backend, it delivers lightning-fast message delivery, live seen status updates, and smooth group or one-on-one chats. Designed with a modern UI and optimized performance, it keeps you connected without delays — anytime, anywhere.",
+    github: "",
+    live: {
+      Android:
+        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+      iOS: "https://apps.apple.com/in/app/club-mahindra/id1146810334",
+      macOS: "https://apps.apple.com/in/app/club-mahindra/id1146810334",
+      Windows:
+        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+      Linux:
+        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+      Download:
+        "https://drive.google.com/file/d/1oyf-8e8kn4wWfCIc971g1ofiRgHwkOqr/view?usp=sharing",
+    },
+    techStack: [
+      { name: "React Native", icon: <FaReact /> },
+      { name: "Redux", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Android", icon: <AiFillAndroid /> },
+      { name: "iOS", icon: <SiXcode /> },
+      { name: "Socket.IO", icon: <SiSocketdotio /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
     ],
   },
   // {
