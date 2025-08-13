@@ -360,7 +360,7 @@ export const workImages = [
       Linux:
         "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
       Download:
-        "https://drive.google.com/file/d/1oyf-8e8kn4wWfCIc971g1ofiRgHwkOqr/view?usp=sharing",
+        "https://drive.google.com/drive/folders/1uMNS7RgW8ea6YXKJULa0NLZQHRuBiA4B?usp=sharing",
     },
     techStack: [
       { name: "React Native", icon: <FaReact /> },
