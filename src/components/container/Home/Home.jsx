@@ -6,7 +6,7 @@ import resumePDF from "../../../assets/Gokulnath_Selvaraj.pdf";
 
 const Home = () => {
   const scrollToPortfolio = () => {
-    const portfolioSection = document.getElementById("portfolio");
+    const portfolioSection = document.getElementById("projects");
     if (portfolioSection) {
       portfolioSection.scrollIntoView({
         behavior: "smooth",
