@@ -161,7 +161,7 @@ const ProjectDetails = () => {
                   href={
                     project.live["Download"]
                       ? project.live["Download"]
-                      : project.live[userOS]
+                      : project.live["Android"]
                   }
                   target="_blank"
                   rel="noopener noreferrer"
@@ -170,8 +170,17 @@ const ProjectDetails = () => {
                   {project.live["Download"] ? (
                     <span>Download Android APK</span>
                   ) : (
-                    <span>{getStoreText()}</span>
+                    <span>Visit Play Store</span>
                   )}
+                </a>
+                <a
+                  className="action-button primary"
+                  href={project.live["iOS"]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaExternalLinkSquareAlt className="icon" />
+                  {<span>Visit App Store</span>}
                 </a>
               </div>
             </div>
