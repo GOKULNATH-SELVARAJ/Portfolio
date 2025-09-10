@@ -351,14 +351,11 @@ export const workImages = [
       "A real-time messaging platform built for seamless, instant communication. Powered by Socket.IO and a Node.js backend, it delivers lightning-fast message delivery, live seen status updates, and smooth group or one-on-one chats. Designed with a modern UI and optimized performance, it keeps you connected without delays — anytime, anywhere.",
     github: "",
     live: {
-      Android:
-        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
-      iOS: "https://apps.apple.com/in/app/club-mahindra/id1146810334",
-      macOS: "https://apps.apple.com/in/app/club-mahindra/id1146810334",
-      Windows:
-        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
-      Linux:
-        "https://play.google.com/store/apps/details?id=co.clubmahindra.mahindraholidays&pcampaignid=web_share",
+      Android: "",
+      iOS: "",
+      macOS: "",
+      Windows: "",
+      Linux: "",
       Download:
         "https://drive.google.com/drive/folders/1uMNS7RgW8ea6YXKJULa0NLZQHRuBiA4B?usp=sharing",
     },
