@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.3310baf7.css",
-    "main.js": "/Portfolio/static/js/main.485cbd42.js",
+    "main.js": "/Portfolio/static/js/main.d952e5e1.js",
     "static/media/Profile_image.png": "/Portfolio/static/media/Profile_image.49141c200b94adea3898.png",
     "static/media/ABG_connect_4.png": "/Portfolio/static/media/ABG_connect_4.8cc34a404fd9fe5c8815.png",
     "static/media/ABG_connect_1.png": "/Portfolio/static/media/ABG_connect_1.e3ee5ae0822f9d382d1d.png",
@@ -20,7 +20,7 @@
     "static/media/Chit_chat_4.png": "/Portfolio/static/media/Chit_chat_4.485f658f9f2bedef2dbb.png",
     "static/media/Gintaa_4.png": "/Portfolio/static/media/Gintaa_4.bd8159ba62f9a56b0c3d.png",
     "static/media/ABG_logo.png": "/Portfolio/static/media/ABG_logo.ae91631c0be5f02567f2.png",
-    "static/media/Gokulnath_Selvaraj.pdf": "/Portfolio/static/media/Gokulnath_Selvaraj.66cf5296d0c10b5c2ffa.pdf",
+    "static/media/Gokulnath_Selvaraj.pdf": "/Portfolio/static/media/Gokulnath_Selvaraj.7c9739a26579248dec37.pdf",
     "static/media/Chit_chat_3.png": "/Portfolio/static/media/Chit_chat_3.234cf570fd4dce5c3f06.png",
     "static/media/Chit_chat_2.png": "/Portfolio/static/media/Chit_chat_2.7e79718b4de449ae43f8.png",
     "static/media/Chit_chat_1.png": "/Portfolio/static/media/Chit_chat_1.9a2b992f0cc0af5932f1.png",
@@ -28,10 +28,10 @@
     "static/media/Chit_chat_logo.png": "/Portfolio/static/media/Chit_chat_logo.ee9675626f876e1c46af.png",
     "index.html": "/Portfolio/index.html",
     "main.3310baf7.css.map": "/Portfolio/static/css/main.3310baf7.css.map",
-    "main.485cbd42.js.map": "/Portfolio/static/js/main.485cbd42.js.map"
+    "main.d952e5e1.js.map": "/Portfolio/static/js/main.d952e5e1.js.map"
   },
   "entrypoints": [
     "static/css/main.3310baf7.css",
-    "static/js/main.485cbd42.js"
+    "static/js/main.d952e5e1.js"
   ]
 }
